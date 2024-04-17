@@ -2,6 +2,13 @@ import { MenuIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import {
+  ClerkProvider,
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+} from "@clerk/nextjs";
 
 type Props = {};
 
@@ -57,6 +64,7 @@ const Navbar = (props: Props) => {
         {
           //WIP: Wire up user
         }
+        <UserButton></UserButton>
         <MenuIcon className="md:hidden"></MenuIcon>
       </aside>
     </header>

@@ -45,11 +45,11 @@ export default function Settings({}: Props) {
           <p className="text-base text-white/50">
             Add or update your information
           </p>
-          <ProfilePicture
+          {/* <ProfilePicture
             onDelete={removeProfileImage}
             userImage={user?.profileImage || ""}
             onUpload={uploadProfileImage}
-          ></ProfilePicture>
+          ></ProfilePicture> */}
           <ProfileForm />
         </div>
       </div>
