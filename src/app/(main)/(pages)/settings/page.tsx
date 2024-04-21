@@ -9,7 +9,7 @@ type Props = {};
 export default async function Settings({}: Props) {
   const authUser = await currentUser();
   if (!authUser) return null;
-  const user = db.user.findUnique({ where: { clerkId: authUser.id } });
+  const user = await db.user.findUnique({ where: { clerkId: authUser.id } });
   const removeProfileImage = async () => {
     "use server";
     const response = await db.user.update({

@@ -38,7 +38,7 @@ const ProfilePicture = ({ userImage, onDelete, onUpload }: Props) => {
             </Button>
           </>
         ) : (
-          <UploadCareButton />
+          <UploadCareButton onUpload={onUpload} />
         )}
       </div>
     </div>
