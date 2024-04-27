@@ -6,7 +6,7 @@ import ConnectionCard from "./_components/connection-card";
 type Props = {
   searchParams?: { [key: string]: string | undefined };
 };
-
+// WIP : CONNECTION to be completed
 const Connections = (props: Props) => {
   return (
     <div className="relative flex flex-col gap-4">
@@ -19,7 +19,14 @@ const Connections = (props: Props) => {
           these apps regularly to refresh verification
         </section>
         {CONNECTIONS.map((connection) => (
-          <ConnectionCard key={connection.title}></ConnectionCard>
+          <ConnectionCard
+            key={connection.title}
+            description={connection.description}
+            title={connection.title}
+            icon={connection.image}
+            type={connection.title}
+            // connected={connections}
+          ></ConnectionCard>
         ))}
       </div>
     </div>
