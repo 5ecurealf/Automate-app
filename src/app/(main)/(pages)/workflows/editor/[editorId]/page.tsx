@@ -1,5 +1,14 @@
+import EditorProvider from "@/providers/editor-provider";
 import React from "react";
 
-export default function Editor({ params }: { params: { editorId: string } }) {
-  return <div>My Post: {params.editorId}</div>;
-}
+type Props = {};
+
+const Page = (props: Props) => {
+  return (
+    <EditorProvider>
+      <div></div>
+    </EditorProvider>
+  );
+};
+
+export default Page;
